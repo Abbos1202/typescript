@@ -1,3 +1,5 @@
+// lesson 1
+
 // Typescript => A language that superset of JS yani Javascriptni oldindan typeni aytib ketuvchi language
 
 // npm install -g typescript => typescript o'rnatish uchun
@@ -22,3 +24,11 @@
 // anyDataAr.push(1234, "Abbos", [], {}, true, null, undefined);
 
 // console.log(anyDataAr);
+
+// ==========================================================
+// ==========================================================
+
+
+// lesson 2
+
+// undefined = void
