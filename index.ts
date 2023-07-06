@@ -1,110 +1,55 @@
-// interface general {
-//   age: number;
+// function getData(a: string | number) {
+//   if (typeof a === "string") a.repeat(3);
 // }
 
-// interface name {
-//   name: string
-// }
-
-// interface user extends general, name {}
-
-// let obj: user = {
-//   name: "Abbos",
-//   age: 21,
-// };
-
-// type name = {
-//   name?: string;
-// };
-
-// type age = {
-//   age?: number;
-// };
-
-// type data = name | age;
-
-// let obj: data = {
-//   age: 21,
-// };
-
-// interface name {
-//   readonly name?: string;
-// }
-
-// interface age {
-//   age?: number;
-// }
-
-// interface data extends name, age {}
-
-// interface writable {
-//   name?: string;
-//   age?: number;
-// }
-
-// let obj: data = {
-//   name: "Abbos",
-//   age: 21,
-// };
-
-// let wo: writable = obj;
-
-// wo.name = "Anvar",
-
-// // obj.name = "Webbrain"; => error
-
-// console.log(obj.name);
-
-// interface Prop<Type, TypeN> {
-//   year: TypeN;
-//   name: Type;
-//   check?:() =>void
-//   [index: string]: Function | undefined | Type | TypeN;
-// }
-
-// let obj: Prop<string, number> = {
-//   name: "Abbos",
-//   age: 21,
-//   year: 2002,
-//   // check(){},
-// };
-
-// console.log(obj.name, obj.age, obj.year);
-
-// interface User {
-//   name: string;
-//   age: number;
-// }
-
-// class Person implements User {
-//   constructor(name: string) {}
-//   name = "Abbos";
-//   age = 21;
-// }
-
-// let usr = new Person("Firdavs");
-
-// interface User {
-//   // name: string;
-//   age?: number;
-// }
-
-// class Person implements User{
-//   constructor(name: string) {}
-//   #name = "Abbos";
-//   private title = "Hi";
-//   age = 21;
-//   getData(){
-//     console.log(this.#name, this.title);
-
+// function check(a: string | string[] | null) {
+//   if (a) {
+//     for (let i of a) {
+//       console.log(i);
+//     }
 //   }
 // }
 
-// let usr = new Person("Firdavs");
+// const time = (key: string): string => {
+//   let date = new Date();
 
-// // console.log(usr.age);
-// console.log(usr.getData());
+//   switch (key) {
+//     case "ll":
+//       return `${date.getDate()} ${date.getMonth()} ${date.getFullYear()}`;
+//     case "l":
+//       return `${date.getDate()} ${date.getMonth()} `;
+//     default:
+//       return `${date.getDate()} ${date.getMonth()}`;
+//   }
+// };
 
-type course = "frontend" | "backend" | "mobile";
+// console.log(time("ll"));
+// console.log(time("l"));
 
-let courses: course = "frontend";
+// function getData (str: string | number[]) {
+//   console.log(str.length);
+// }
+
+// function get(str: string | number) {
+//   if (typeof str === "string") console.log(str.length);
+// }
+
+// function get(str?: string) {
+//   if (typeof str === "string") {
+//     let title: string = str;
+//   }
+// }
+
+// function get(str?: string) {
+//   let title: string = str!;
+// }
+
+// function get(): never {
+//   throw new Error("404 Not found")
+// }
+
+function get(): unknown {
+  throw new Error("404 Not found");
+}
+
+let test: never;
