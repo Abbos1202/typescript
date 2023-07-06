@@ -1,7 +1,4 @@
-// function getData(): string {
-//   return "Abbos";
+// interface general {
+//   age: number;
 // }
-function getDate(a, b, c) {
-    return "string";
-}
-console.log(getDate("Abbos", "Ibrokhimov"));
+var courses = "frontend";

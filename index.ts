@@ -1,107 +1,110 @@
-// function getData(): string {
-//   return "Abbos";
+// interface general {
+//   age: number;
 // }
 
-// console.log(getData());
-
-// function getNum(a: number, b: number): number {
-//   return a**b;
+// interface name {
+//   name: string
 // }
 
-// console.log(getNum(2, 4));
+// interface user extends general, name {}
 
-// function getUndefined(): number | void {
-// }
-
-// console.log(getUndefined());
-
-// type callProp = {
-//   (a: number): number
-// }
-
-// type param = {
-//   key: string,
-//   // value: number,
-//   value?: number,
-// }
-
-// function callback(prop: param): callProp{
-//   return (a: number) => a
-// }
-
-// callback({key: "abbos", value:1234})
-// callback({key: "abbos"})
-
-// type callProp = {
-//   new (a: number) : number
-// }
-
-// function callback(date: Date){
-//   return 5
-// }
-
-// console.log(new Date());
-
-// type callParam = {
-//   new (): Object;
+// let obj: user = {
+//   name: "Abbos",
+//   age: 21,
 // };
 
-// const getData = (fn: callParam): string => {
-//   return new fn().toString();
+// type name = {
+//   name?: string;
 // };
 
-// function ConsFun() {
-//   return Date;
+// type age = {
+//   age?: number;
+// };
+
+// type data = name | age;
+
+// let obj: data = {
+//   age: 21,
+// };
+
+// interface name {
+//   readonly name?: string;
 // }
 
-// console.log(getData(ConsFun()));
-
-// let arrString : string[] = []
-// let arrNumber : number[] = []
-
-// arrString.push("Abbos", "webbrain", "academy")
-// arrNumber.push(21, 2021, 2023)
-
-// console.log(arrString);
-// console.log(arrNumber);
-
-// let ar : string[] =[ "webbrain", "academy"]
-// function getData(value: string, ar: string[]) {
-// ar.push(value)
-// console.log(ar);
+// interface age {
+//   age?: number;
 // }
 
-// getData("frontend", ar)
-// getData("backend", ar)
+// interface data extends name, age {}
 
-// function getData<Type>(ar: Type[]) {
-//   return (value: Type) => {
-//     ar.push(value);
-//     console.log(ar);
-//   };
+// interface writable {
+//   name?: string;
+//   age?: number;
 // }
 
-// const strArray = getData<string>([]);
-// const numArray = getData<number>([]);
+// let obj: data = {
+//   name: "Abbos",
+//   age: 21,
+// };
 
-// strArray("frontend");
-// strArray("backend");
+// let wo: writable = obj;
 
-// numArray(1234);
+// wo.name = "Anvar",
 
-// function getData<Type extends {length: number}> (a: Type){
-//   console.log(a.length);
-  
+// // obj.name = "Webbrain"; => error
+
+// console.log(obj.name);
+
+// interface Prop<Type, TypeN> {
+//   year: TypeN;
+//   name: Type;
+//   check?:() =>void
+//   [index: string]: Function | undefined | Type | TypeN;
 // }
 
-// getData<string>("Abbos")
-// getData<number[]>([1, 2, 3, 4])
+// let obj: Prop<string, number> = {
+//   name: "Abbos",
+//   age: 21,
+//   year: 2002,
+//   // check(){},
+// };
 
+// console.log(obj.name, obj.age, obj.year);
 
-function getDate(a: string) : string
-function getDate(a: string, b: string) : string
-function getDate(a: string, b: string, c?: string) : string
-function getDate(a?: string, b?: string, c?:string) : string {
-  return "string"
-}
-console.log(getDate("Abbos", "Ibrokhimov"));
+// interface User {
+//   name: string;
+//   age: number;
+// }
+
+// class Person implements User {
+//   constructor(name: string) {}
+//   name = "Abbos";
+//   age = 21;
+// }
+
+// let usr = new Person("Firdavs");
+
+// interface User {
+//   // name: string;
+//   age?: number;
+// }
+
+// class Person implements User{
+//   constructor(name: string) {}
+//   #name = "Abbos";
+//   private title = "Hi";
+//   age = 21;
+//   getData(){
+//     console.log(this.#name, this.title);
+
+//   }
+// }
+
+// let usr = new Person("Firdavs");
+
+// // console.log(usr.age);
+// console.log(usr.getData());
+
+type course = "frontend" | "backend" | "mobile";
+
+let courses: course = "frontend";

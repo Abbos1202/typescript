@@ -32,3 +32,31 @@
 // lesson 2
 
 // undefined = void
+
+// ==========================================================
+// ==========================================================
+
+// lesson 3 
+
+// type => extends qilib bo'lmaydi
+// interface => extends qilib bo'ladi va bir marta extends yozib vergul orqali xohlagancha interface ni yozish mumkin
+
+// interface user extends general, name {}
+
+// readonly => malumotni yangilab  bo'lmaydi
+// writable => yangi object va interface yaratib readonly ni yo'q qilsa bo'ladi
+
+
+// index signature = > string number symbol oladi boshqa type olmaydi
+
+// index signature => biz objectda ixtiyoriy malumot biriktirishimiz mumkin bo'ladi yani nechta key borligini oldindan bilmasligimiz mumkin mana shu xolatda barcha ma'lumotni qabul qilishga ruxsat berishga aytiladi
+
+// implements => class bilan ishlaydi va obj dagi : nuqtani ornini bosadi va key larimiz = bilan yoziladi
+
+// interface User {
+//    name: string
+//  }
+ 
+//  class Person implements User {
+//    name = "Abbos"
+//  }
